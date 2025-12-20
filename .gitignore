@@ -1,0 +1,33 @@
+# OS/editor junk
+.DS_Store
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Data (exclude all, but keep placeholders/readme if needed)
+data/**
+!data/.gitkeep
+!data/README.md
+
+# Images (exclude raw design files)
+images/**/*.psd
+
+# Logs and temp
+*.log
+tmp/

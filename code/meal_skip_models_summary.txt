@@ -1,0 +1,126 @@
+Breakfast model
+
+Call:
+lm(formula = Breakfast_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
+    gender + energy_kcal_eaten, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.29497 -0.10668 -0.03779  0.06573  0.79984 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    5.705e-01  5.523e-02  10.330  < 2e-16 ***
+daily_HEI                     -2.299e-03  8.238e-04  -2.791  0.00537 ** 
+bmi_catObese                   3.473e-02  2.171e-02   1.600  0.11001    
+bmi_catOverweight              1.552e-02  1.271e-02   1.221  0.22255    
+bmi_catUnderweight            -2.264e-02  3.432e-02  -0.660  0.50971    
+age_group_235-50              -7.274e-02  1.767e-02  -4.117 4.16e-05 ***
+age_group_2>50                -7.215e-02  2.218e-02  -3.253  0.00118 ** 
+genderfemale                  -7.791e-02  1.737e-02  -4.486 8.14e-06 ***
+energy_kcal_eaten             -1.026e-04  1.408e-05  -7.285 6.74e-13 ***
+age_group_235-50:genderfemale  3.235e-02  2.324e-02   1.392  0.16420    
+age_group_2>50:genderfemale    2.979e-02  2.949e-02   1.010  0.31276    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1602 on 951 degrees of freedom
+Multiple R-squared:  0.1032,	Adjusted R-squared:  0.09377 
+F-statistic: 10.94 on 10 and 951 DF,  p-value: < 2.2e-16
+
+
+
+Lunch model
+
+Call:
+lm(formula = Lunch_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
+    gender + energy_kcal_eaten, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.07551 -0.03710 -0.02662  0.02892  0.69498 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    1.266e-01  2.416e-02   5.242 1.95e-07 ***
+daily_HEI                     -4.690e-04  3.603e-04  -1.302 0.193343    
+bmi_catObese                  -5.437e-03  9.497e-03  -0.573 0.567104    
+bmi_catOverweight             -3.183e-03  5.560e-03  -0.572 0.567168    
+bmi_catUnderweight             8.471e-03  1.501e-02   0.564 0.572749    
+age_group_235-50              -1.247e-02  7.728e-03  -1.614 0.106821    
+age_group_2>50                 3.217e-03  9.702e-03   0.332 0.740264    
+genderfemale                  -2.252e-02  7.596e-03  -2.964 0.003108 ** 
+energy_kcal_eaten             -2.216e-05  6.161e-06  -3.597 0.000338 ***
+age_group_235-50:genderfemale  8.401e-03  1.016e-02   0.826 0.408748    
+age_group_2>50:genderfemale    3.847e-03  1.290e-02   0.298 0.765569    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07006 on 951 degrees of freedom
+Multiple R-squared:  0.03166,	Adjusted R-squared:  0.02148 
+F-statistic: 3.109 on 10 and 951 DF,  p-value: 0.0006513
+
+
+
+Dinner model
+
+Call:
+lm(formula = Dinner_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
+    gender + energy_kcal_eaten, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.08260 -0.03935 -0.02464  0.02734  0.82079 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    1.498e-01  2.835e-02   5.284 1.57e-07 ***
+daily_HEI                     -6.755e-04  4.228e-04  -1.598 0.110444    
+bmi_catObese                  -5.503e-03  1.114e-02  -0.494 0.621529    
+bmi_catOverweight              8.058e-03  6.524e-03   1.235 0.217120    
+bmi_catUnderweight             2.546e-02  1.762e-02   1.445 0.148755    
+age_group_235-50              -1.341e-02  9.068e-03  -1.478 0.139655    
+age_group_2>50                -1.282e-02  1.138e-02  -1.126 0.260568    
+genderfemale                  -2.684e-02  8.913e-03  -3.011 0.002669 ** 
+energy_kcal_eaten             -2.640e-05  7.229e-06  -3.651 0.000275 ***
+age_group_235-50:genderfemale  1.240e-02  1.193e-02   1.040 0.298715    
+age_group_2>50:genderfemale    4.671e-02  1.514e-02   3.086 0.002088 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08221 on 951 degrees of freedom
+Multiple R-squared:  0.04017,	Adjusted R-squared:  0.03007 
+F-statistic:  3.98 on 10 and 951 DF,  p-value: 2.39e-05
+
+
+
+Late-night model
+
+Call:
+lm(formula = Late_night_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
+    gender + energy_kcal_eaten, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.71045 -0.03134  0.04115  0.07649  0.17270 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                    8.707e-01  4.269e-02  20.395  < 2e-16 ***
+daily_HEI                      2.293e-03  6.368e-04   3.601 0.000334 ***
+bmi_catObese                  -2.537e-02  1.678e-02  -1.512 0.130938    
+bmi_catOverweight             -2.451e-03  9.826e-03  -0.249 0.803058    
+bmi_catUnderweight             2.304e-02  2.653e-02   0.868 0.385436    
+age_group_235-50               1.026e-02  1.366e-02   0.751 0.452755    
+age_group_2>50                 2.227e-02  1.715e-02   1.299 0.194386    
+genderfemale                  -2.747e-03  1.342e-02  -0.205 0.837901    
+energy_kcal_eaten             -4.126e-05  1.089e-05  -3.789 0.000161 ***
+age_group_235-50:genderfemale  1.954e-02  1.796e-02   1.088 0.276918    
+age_group_2>50:genderfemale   -1.066e-02  2.280e-02  -0.468 0.640087    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1238 on 951 degrees of freedom
+Multiple R-squared:  0.04846,	Adjusted R-squared:  0.03845 
+F-statistic: 4.843 on 10 and 951 DF,  p-value: 7.873e-07
+
