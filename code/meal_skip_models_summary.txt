@@ -1,4 +1,8 @@
+
+> cat("Breakfast model\n")
 Breakfast model
+
+> summary(breakfast_model)
 
 Call:
 lm(formula = Breakfast_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
@@ -29,8 +33,12 @@ Multiple R-squared:  0.1032,	Adjusted R-squared:  0.09377
 F-statistic: 10.94 on 10 and 951 DF,  p-value: < 2.2e-16
 
 
+> cat("\n\nLunch model\n")
+
 
 Lunch model
+
+> summary(lunch_model)
 
 Call:
 lm(formula = Lunch_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
@@ -61,8 +69,12 @@ Multiple R-squared:  0.03166,	Adjusted R-squared:  0.02148
 F-statistic: 3.109 on 10 and 951 DF,  p-value: 0.0006513
 
 
+> cat("\n\nDinner model\n")
+
 
 Dinner model
+
+> summary(dinner_model)
 
 Call:
 lm(formula = Dinner_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
@@ -93,8 +105,12 @@ Multiple R-squared:  0.04017,	Adjusted R-squared:  0.03007
 F-statistic:  3.98 on 10 and 951 DF,  p-value: 2.39e-05
 
 
+> cat("\n\nLate-night model\n")
+
 
 Late-night model
+
+> summary(latenight_model)
 
 Call:
 lm(formula = Late_night_skip_ratio ~ daily_HEI + bmi_cat + age_group_2 * 
@@ -124,3 +140,5 @@ Residual standard error: 0.1238 on 951 degrees of freedom
 Multiple R-squared:  0.04846,	Adjusted R-squared:  0.03845 
 F-statistic: 4.843 on 10 and 951 DF,  p-value: 7.873e-07
 
+
+> sink()

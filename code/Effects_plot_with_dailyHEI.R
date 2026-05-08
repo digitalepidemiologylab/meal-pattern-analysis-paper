@@ -13,9 +13,9 @@ data$gender      <- relevel(factor(data$gender),    ref = "male")
 data$bmi_cat     <- relevel(factor(data$bmi_cat),   ref = "Normal")
 
 # Helper function to create single‐interaction plots
-create_skip_mealtime_single_interaction_plot <- function(model, y_limits = NULL, hide_legend = FALSE) {
+create_skip_mealtime_single_interaction_plot <- function(model, y_label = NULL, y_limits = NULL, hide_legend = FALSE) {
   p <- plot_model(model, type = "int", title = "") +
-    labs(x = "Age group", color = "Gender") +
+    labs(x = "Age group", y = y_label, color = "Sex") +
     theme(
       panel.grid     = element_blank(),
       axis.ticks     = element_line(size = 0.5, color = "black"),
@@ -38,10 +38,10 @@ dinner_model    <- lm(Dinner_skip_ratio      ~ daily_HEI + bmi_cat + age_group_2
 latenight_model <- lm(Late_night_skip_ratio  ~ daily_HEI + bmi_cat + age_group_2 * gender + energy_kcal_eaten, data = data)
 
 # Create single‐interaction plots
-breakfast_plot <- create_skip_mealtime_single_interaction_plot(breakfast_model)
-lunch_plot     <- create_skip_mealtime_single_interaction_plot(lunch_model,     y_limits = c(0, 0.25), hide_legend = TRUE)
-dinner_plot    <- create_skip_mealtime_single_interaction_plot(dinner_model,    y_limits = c(0, 0.25))
-latenight_plot <- create_skip_mealtime_single_interaction_plot(latenight_model, hide_legend = TRUE)
+breakfast_plot <- create_skip_mealtime_single_interaction_plot(breakfast_model, y_label = "Breakfast skip ratio")
+lunch_plot     <- create_skip_mealtime_single_interaction_plot(lunch_model,     y_label = "Lunch skip ratio",      y_limits = c(0, 0.25), hide_legend = TRUE)
+dinner_plot    <- create_skip_mealtime_single_interaction_plot(dinner_model,    y_label = "Dinner skip ratio",     y_limits = c(0, 0.25))
+latenight_plot <- create_skip_mealtime_single_interaction_plot(latenight_model, y_label = "Late-night skip ratio", hide_legend = TRUE)
 
 # Summaries
 summary(breakfast_model)
@@ -102,7 +102,7 @@ breakfast_pred_plot <- plot_model(
   terms = c("daily_HEI", "gender", "age_group_2")
 ) +
   ggtitle("Age groups") +
-  labs(color = "Gender") +
+  labs(x = "Daily HEI", y = "Breakfast skip ratio", color = "Sex") +
   theme_minimal() +
   theme(
     panel.grid.major = element_blank(),
@@ -120,7 +120,7 @@ latenight_pred_plot <- plot_model(
   terms = c("daily_HEI", "gender", "age_group_2")
 ) +
   ggtitle("Age groups") +
-  labs(color = "Gender") +
+  labs(x = "Daily HEI", y = "Late-night skip ratio", color = "Sex") +
   theme_minimal() +
   theme(
     panel.grid.major = element_blank(),
@@ -139,7 +139,7 @@ lunch_pred_plot <- plot_model(
   terms = c("daily_HEI", "gender", "age_group_2")
 ) +
   ggtitle("Age groups") +
-  labs(color = "Gender") +
+  labs(x = "Daily HEI", y = "Lunch skip ratio", color = "Sex") +
   theme_minimal() +
   theme(
     panel.grid.major = element_blank(),
@@ -157,7 +157,7 @@ dinner_pred_plot <- plot_model(
   terms = c("daily_HEI", "gender", "age_group_2")
 ) +
   ggtitle("Age groups") +
-  labs(color = "Gender") +
+  labs(x = "Daily HEI", y = "Dinner skip ratio", color = "Sex") +
   theme_minimal() +
   theme(
     panel.grid.major = element_blank(),
