@@ -1,6 +1,6 @@
 # Meal timing effects on dietary quality and glucose response
 
-Analysis code and notebooks accompanying the paper *"Meal timing effects on dietary quality and glucose response: insights from Food & You digital cohort"* (Singh & Salathé).
+Analysis code and notebooks accompanying the paper *"Meal timing effects on dietary quality and glucose response: insights from Food & You digital cohort"*.
 
 ## Overview
 
@@ -40,7 +40,7 @@ The Food & You study protocol was approved by the Geneva Ethics Commission (appr
 
 ## Citation
 
-If you use this code, please cite the accompanying paper (Singh & Salathé) and the Food & You cohort description (Héritier et al., 2023).
+If you use this code, please also cite the accompanying paper (Singh & Salathé) and the Food & You cohort description (Héritier et al., 2023).
 
 ## Contact
 
